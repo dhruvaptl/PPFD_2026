@@ -8,22 +8,34 @@
 </head>
 <body>
 
-  <header class="container">
-    <h1>Dhruva Patel</h1>
-    <p class="subtitle">B.Tech IT Student | Aspiring Software Engineer</p>
-   <div class="links">
-  <a href="https://github.com/dhruvaptl" target="_blank">GitHub</a>
-  <a href="https://www.linkedin.com/in/dhruva-patel" target="_blank">LinkedIn</a>
-  <a href="mailto:dhruva140207@gmail.com">Email</a>
-  <a href="DHRUVA_PATEL_RESUME.pdf" target="_blank">Download Resume</a>
-</div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-name">Dhruva Patel</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="https://github.com/dhruvaptl" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/dhruva-patel" target="_blank">LinkedIn</a>
+      <a href="DHRUVA_PATEL_RESUME.pdf" target="_blank" class="resume-btn">Resume</a>
+    </div>
+  </nav>
 
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Hi, I’m Dhruva 👋</h1>
+    <p>B.Tech IT Student • Aspiring Software Engineer</p>
+    <div class="hero-buttons">
+      <a href="#about" class="primary-btn">Explore Portfolio</a>
+      <a href="DHRUVA_PATEL_RESUME.pdf" target="_blank" class="secondary-btn">Download Resume</a>
+    </div>
   </header>
 
+  <!-- CONTENT -->
   <main class="container">
 
-    <section>
-      <h2>About</h2>
+    <section id="about" class="card">
+      <h2>About Me</h2>
       <p>
         I am a Bachelor of Technology student in Information Technology with a strong interest
         in software development and problem solving. I focus on building solid computer science
@@ -31,15 +43,15 @@
       </p>
     </section>
 
-    <section>
+    <section id="education" class="card">
       <h2>Education</h2>
       <p>
         <strong>Parul University, Vadodara</strong><br>
-        Bachelor of Technology – Information Technology (2024 – 2028)<br>
+        Bachelor of Technology – Information Technology (2024 – 2028)
       </p>
     </section>
 
-    <section>
+    <section id="skills" class="card">
       <h2>Skills</h2>
       <ul class="skills">
         <li>Java</li>
@@ -57,7 +69,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Certifications</h2>
       <ul>
         <li>HTML & CSS Certification</li>
@@ -65,7 +77,7 @@
       </ul>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Languages</h2>
       <p>English, Hindi, Gujarati</p>
     </section>
