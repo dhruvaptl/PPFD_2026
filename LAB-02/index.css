@@ -4,15 +4,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* ================= COLOR SYSTEM ================= */
+/* ================= COLORS ================= */
 
 :root {
-  --bg: #f5eee6;        /* warm beige */
-  --text: #1a1613;      /* strong dark */
-  --secondary: #2e2722; /* deep brown text */
-  --accent: #8b5e3c;    /* luxury brown */
+  --bg: #f5eee6;
+  --text: #1a1613;
+  --secondary: #2e2722;
+  --accent: #8b5e3c;
   --accent-soft: #b07a53;
   --border: #d7c7b9;
 }
@@ -22,7 +23,7 @@ body {
   color: var(--text);
   font-family: 'Inter', sans-serif;
   line-height: 1.9;
-  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ================= NAVBAR ================= */
@@ -32,16 +33,21 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 9%;
+  position: sticky;
+  top: 0;
+  background: rgba(245, 238, 230, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   margin-left: 2.5rem;
   font-size: 1rem;
@@ -50,20 +56,33 @@ body {
   transition: 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: var(--accent);
+/* Elegant underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: var(--accent);
+  transition: width 0.3s ease;
 }
 
-/* ================= HERO SECTION ================= */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
 
 .hero {
-  padding: 7rem 9% 5rem 9%;
+  padding: 7rem 9% 6rem 9%;
   max-width: 1000px;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3.7rem;
+  font-size: 3.8rem;
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
@@ -76,19 +95,26 @@ body {
   font-weight: 500;
 }
 
-/* ================= GENERAL SECTIONS ================= */
+/* ================= SECTIONS ================= */
 
 .section {
-  padding: 5rem 9%;
+  padding: 6rem 9%;
   max-width: 1000px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  letter-spacing: -0.5px;
 }
 
 .section p {
@@ -97,8 +123,6 @@ body {
   font-weight: 500;
   color: var(--secondary);
 }
-
-/* ================= LIST STYLING ================= */
 
 .section ul {
   margin-top: 1.5rem;
@@ -112,7 +136,7 @@ body {
   font-weight: 500;
 }
 
-/* ================= SKILLS TAGS ================= */
+/* ================= SKILLS ================= */
 
 .skills {
   margin-top: 2rem;
@@ -122,7 +146,7 @@ body {
 }
 
 .skills span {
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.6rem;
   border-radius: 40px;
   font-size: 1rem;
   font-weight: 600;
@@ -135,36 +159,28 @@ body {
 .skills span:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-3px);
 }
 
-/* ================= BUTTON STYLE ================= */
+/* ================= BUTTON ================= */
 
 .btn {
   display: inline-block;
   margin-top: 2.5rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2.7rem;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 40px;
   border: 2px solid var(--accent);
   text-decoration: none;
   color: var(--accent);
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background: var(--accent);
   color: #ffffff;
-}
-
-/* ================= LINKS RESET ================= */
-
-a {
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: none;
+  transform: translateY(-3px);
 }
 
 /* ================= FOOTER ================= */
@@ -175,4 +191,17 @@ footer {
   font-size: 1rem;
   font-weight: 500;
   color: var(--secondary);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
