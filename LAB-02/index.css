@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -6,15 +6,15 @@
   box-sizing: border-box;
 }
 
-/* ================= PREMIUM PALETTE ================= */
+/* ================= COLOR SYSTEM ================= */
 
 :root {
-  --bg: #f4ede6;          /* soft warm beige */
-  --text: #141210;        /* strong near-black */
-  --secondary: #2c2621;   /* dark brown text */
-  --accent: #8b5e3c;      /* luxury brown */
-  --highlight: #b07a53;   /* lighter accent */
-  --border: #d6c7bb;
+  --bg: #f5eee6;        /* warm beige */
+  --text: #1a1613;      /* strong dark */
+  --secondary: #2e2722; /* deep brown text */
+  --accent: #8b5e3c;    /* luxury brown */
+  --accent-soft: #b07a53;
+  --border: #d7c7b9;
 }
 
 body {
@@ -35,8 +35,8 @@ body {
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -54,7 +54,7 @@ body {
   color: var(--accent);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO SECTION ================= */
 
 .hero {
   padding: 7rem 9% 5rem 9%;
@@ -62,8 +62,8 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.6rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.7rem;
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
@@ -76,7 +76,7 @@ body {
   font-weight: 500;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= GENERAL SECTIONS ================= */
 
 .section {
   padding: 5rem 9%;
@@ -84,8 +84,8 @@ body {
 }
 
 .section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
   letter-spacing: -0.5px;
@@ -98,7 +98,7 @@ body {
   color: var(--secondary);
 }
 
-/* ================= LISTS ================= */
+/* ================= LIST STYLING ================= */
 
 .section ul {
   margin-top: 1.5rem;
@@ -107,12 +107,12 @@ body {
 
 .section li {
   font-size: 1.15rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
   color: var(--secondary);
   font-weight: 500;
 }
 
-/* ================= SKILLS ================= */
+/* ================= SKILLS TAGS ================= */
 
 .skills {
   margin-top: 2rem;
@@ -127,7 +127,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   border: 1px solid var(--border);
-  background: #fff9f4;
+  background: #fffaf5;
   color: var(--secondary);
   transition: 0.3s ease;
 }
@@ -137,7 +137,7 @@ body {
   color: var(--accent);
 }
 
-/* ================= BUTTON ================= */
+/* ================= BUTTON STYLE ================= */
 
 .btn {
   display: inline-block;
