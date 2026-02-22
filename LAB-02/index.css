@@ -7,125 +7,84 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Color palette: neutral beige */
 :root {
-  --bg: #f6f4f1;
-  --card: #ffffff;
-  --text: #2b2b2b;
+  --bg: #f6f3ef;
+  --text: #2e2e2e;
   --muted: #6b6b6b;
   --accent: #a1866f;
+  --card: #ffffff;
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
   line-height: 1.7;
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.4rem 3rem;
-  background: var(--card);
-}
-
-.brand {
-  font-weight: 600;
-}
-
-.nav-links a {
-  margin-left: 1.4rem;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 0.95rem;
-}
-
-.resume-link {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-/* HERO */
-.hero {
-  max-width: 900px;
-  margin: 4rem auto 2rem;
-  padding: 0 2rem;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-}
-
-.hero-sub {
-  margin-top: 0.8rem;
-  color: var(--muted);
-  max-width: 600px;
-}
-
-/* CONTENT */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 2rem;
 }
 
-.section {
+header {
+  text-align: center;
   background: var(--card);
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0.8rem 0 1.2rem;
+}
+
+.links a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+section {
+  background: var(--card);
+  margin-top: 1.6rem;
   padding: 1.8rem;
   border-radius: 10px;
-  margin-bottom: 1.6rem;
 }
 
-.section h2 {
+section h2 {
   margin-bottom: 0.8rem;
+  font-size: 1.4rem;
 }
 
-.highlight {
-  border-left: 4px solid var(--accent);
-}
-
-.learning-list {
-  margin-top: 0.8rem;
-  padding-left: 1.2rem;
-}
-
-.learning-list li {
-  margin-bottom: 0.4rem;
-}
-
-/* SKILLS */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  list-style: none;
 }
 
-.skills span {
+.skills li {
   background: #efeae4;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-size: 0.9rem;
 }
 
-/* CONTACT */
-.contact {
-  text-align: center;
-}
-
-.contact-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background: var(--accent);
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-/* FOOTER */
 footer {
   text-align: center;
-  margin: 3rem 0;
+  padding: 2rem 0;
   color: var(--muted);
+  font-size: 0.9rem;
 }
