@@ -7,13 +7,13 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Color Palette – pastel & professional */
+/* Color palette: neutral beige */
 :root {
-  --bg: #f4f7fb;
-  --text: #1f2933;
-  --muted: #6b7280;
-  --primary: #5b7cfa;
+  --bg: #f6f4f1;
   --card: #ffffff;
+  --text: #2b2b2b;
+  --muted: #6b6b6b;
+  --accent: #a1866f;
 }
 
 body {
@@ -26,65 +26,41 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1.2rem 3rem;
+  padding: 1.4rem 3rem;
   background: var(--card);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
 }
 
-.nav-name {
+.brand {
   font-weight: 600;
-  color: var(--primary);
 }
 
 .nav-links a {
-  margin-left: 1.2rem;
+  margin-left: 1.4rem;
   text-decoration: none;
   color: var(--text);
-  font-weight: 500;
+  font-size: 0.95rem;
 }
 
-.resume-btn {
-  background: var(--primary);
-  color: white !important;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+.resume-link {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
-  margin: 5rem auto 3rem;
+  max-width: 900px;
+  margin: 4rem auto 2rem;
+  padding: 0 2rem;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 }
 
-.hero p {
+.hero-sub {
+  margin-top: 0.8rem;
   color: var(--muted);
-  margin-top: 0.5rem;
-}
-
-.hero-buttons {
-  margin-top: 1.8rem;
-}
-
-.primary-btn,
-.secondary-btn {
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  margin: 0 0.4rem;
-}
-
-.primary-btn {
-  background: var(--primary);
-  color: white;
-}
-
-.secondary-btn {
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  max-width: 600px;
 }
 
 /* CONTENT */
@@ -94,16 +70,28 @@ body {
   padding: 2rem;
 }
 
-.card {
+.section {
   background: var(--card);
-  border-radius: 10px;
   padding: 1.8rem;
-  margin-top: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  margin-bottom: 1.6rem;
 }
 
-.card h2 {
+.section h2 {
   margin-bottom: 0.8rem;
+}
+
+.highlight {
+  border-left: 4px solid var(--accent);
+}
+
+.learning-list {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.learning-list li {
+  margin-bottom: 0.4rem;
 }
 
 /* SKILLS */
@@ -111,14 +99,28 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  list-style: none;
 }
 
-.skills li {
-  background: #eef2ff;
+.skills span {
+  background: #efeae4;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-size: 0.9rem;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
 /* FOOTER */
